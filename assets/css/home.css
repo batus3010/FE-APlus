@@ -12,6 +12,39 @@
     margin: 36px 0;
 }
 
+.wrapper .filter{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 12px;
+}
+
+.wrapper .filter label{
+    margin-right: 12px;
+}
+
+.wrapper .filter #status{
+    width: 180px;
+    height: 32px;
+    margin-right: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.wrapper .filter #filter-button{
+    width: 64px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #4CAF50;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.wrapper .filter #filter-button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .wrapper #topics-container{
     width: 100%;
     /* background-color: #f5f5f5; */
@@ -47,7 +80,6 @@
     position: absolute;
     top: 40%;
     right: 36px;
-
 }
 
 .wrapper .topic .title{

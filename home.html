@@ -18,11 +18,32 @@
                 <i class="fa-solid fa-house"></i>
                 Trang chủ
             </a>
+
+            <div class="search">
+                <input type="text" id="search-input" placeholder="Nhập tên bài kiểm tra để tìm kiếm">
+                <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <a class="logout-link" href="./index.html">Đăng xuất</a>
         </div>
     </header>
 
     <div class="wrapper">
         <h3 class="heading">Danh sách các bài kiểm tra:</h3>
+
+        <div class="filter">
+            <label for="status">Trạng thái:</label>
+
+            <select id="status" name="status">
+                <option value="Tất cả">Tất cả</option>
+                <option value="Chưa làm">Chưa làm</option>
+                <option value="Đã hoàn thành">Đã hoàn thành</option>
+                <option value="Chưa mở">Chưa mở</option>
+                <option value="Hết hạn">Hết hạn</option>
+            </select>
+
+            <button id="filter-button" type="button">Lọc</button>
+        </div>
 
         <div id="topics-container">
             

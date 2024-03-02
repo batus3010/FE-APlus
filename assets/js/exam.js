@@ -1,48 +1,38 @@
-// TODO: Add code to check answers to questions
-document.addEventListener('DOMContentLoaded', function() {
+const urlParams = new URLSearchParams(window.location.search);
+const examId = urlParams.get("id");
+const url = './assets/js/topic.json';
+const examContainer = document.getElementById('exam-container');
 
-    // When click  on correct answer button, set the green color
-    let correct = document.querySelector('.correct');
-    correct.addEventListener('click', function(event) {
-        correct.style.backgroundColor = '#4CAF50';
-        document.querySelector('#feedback1').innerHTML = 'Correct!';
-    });
-
-    // When click  on incorrect answer button, set the red color
-    let incorrects = document.querySelectorAll('.incorrect');
-
-    for(let i = 0; i < incorrects.length; i++)
-    {
-        incorrects[i].addEventListener('click', function(event) {
-        incorrects[i].style.backgroundColor = '#f52920';
-        document.querySelector('#feedback1').innerHTML = 'Incorrect';
-        });
-    }
-
-    let multipleChoiceButtons = document.querySelectorAll('.incorrect, .correct');
-
-    for (let i = 0; i < multipleChoiceButtons.length; i++) {
-        multipleChoiceButtons[i].addEventListener('click', function(event) {
-            this.style.backgroundColor = this.classList.contains('correct') ? '#4CAF50' : '#f52920';
-            document.querySelector('#feedback1').innerHTML = this.classList.contains('correct') ? 'Correct!' : 'Incorrect';
-
-            // Disable all the buttons
-            for (let button of multipleChoiceButtons) {
-                button.disabled = true; 
+fetch(url)
+    .then(function (response) {
+        if (response.status === 200) {
+            return response.json();
+        } else {
+            throw new Error('Lỗi tải file JSON');
+        }
+    })
+    .then(function (data) {
+        for (const topic of data) {
+            if(topic.id == examId){
+                loadExam(topic);
+                break;
             }
-        });
-    }
-
-    document.querySelector('#check').addEventListener('click', function(){
-       let input = document.querySelector('input');
-       
-       if(input.value == 'Châu Á'){
-           input.style.backgroundColor = '#4CAF50';
-           document.querySelector('#feedback2').innerHTML = 'Correct!';
-       } else {
-           input.style.backgroundColor = '#f52920';
-           document.querySelector('#feedback2').innerHTML = 'Incorrect';
-       }
+        }
+    })
+    .catch(function (error) {
+        console.log(error);
     });
 
-});
+function loadExam(topic){
+    examContainer.innerHTML = 
+            `<div class="topic">
+                <div class="topic__link" onclick="getExam(${topic.id})">
+                    <h3 class="title">${topic.title}</h3>
+                    
+                    <div class="duration">Thời gian: <span>${topic.time}</span></div>
+                    <div class="deadline">Đến hạn vào: <span>${topic.deadline}</span></div>
+
+                    <div class="status">${topic.status}</div>
+                </div>
+            </div>`;
+}

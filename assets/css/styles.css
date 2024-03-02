@@ -24,6 +24,62 @@ header{
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header .search{
+    width: 420px;
+    height: 36px;
+    max-width: 50%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.header .search #search-input{
+    flex: 1;
+    border-radius: 6px;
+    height: 100%;
+    outline: none;
+    border: none;
+    text-indent: 16px;
+}
+
+.header .search .search-button{
+    color: #fff;
+    width: 64px;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f52920;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .search .search-button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header .search .search-button i{
+    font-size: 18px;
+}
+
+.header .logout-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.header .logout-link:hover{
+    color: #ededed;
 }
 
 .header .heading{
