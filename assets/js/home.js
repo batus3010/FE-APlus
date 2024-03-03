@@ -2,6 +2,7 @@ const url = './assets/js/topic.json';
 const listTopicContainer = document.getElementById('topics-container');
 const selectElement = document.getElementById("status");
 const filterButtonElement = document.getElementById("filter-button");
+const searchButton = document.getElementById('search-button');
 var listTopics = [];
 
 fetch(url)
@@ -85,3 +86,20 @@ function loadListTopic(listTopic){
 function getExam(id){
     window.location.href = "./exam.html?id=" + id;
 }
+
+searchButton.disabled = false;
+
+searchButton.addEventListener('click', function(){
+    let topicName = document.getElementById('search-input').value.toLowerCase();
+    let listTopicSearchByName = [];
+
+    listTopics.forEach(topic => {
+        let title = topic.title.toLowerCase();
+
+        if (title.includes(topicName)){
+            listTopicSearchByName.push(topic);
+        }
+    })
+
+    loadListTopic(listTopicSearchByName);
+});
