@@ -1,0 +1,78 @@
+#answer-container{
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+#answer-container .exam{
+    position: relative;
+    width: 100%;
+    margin-bottom: 320px;
+}
+
+#answer-container .exam__title{
+    font-size: 28px;
+    margin: 48px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#answer-container .exam__score{
+    margin-left: 16px;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+#answer-container .exam__score span{
+    color: #4CAF50;
+}
+
+#answer-container .exam__questions{
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+#answer-container .question{
+    width: 100%;
+    padding: 16px;
+}
+
+#answer-container .question .question__title{
+    font-size: 20px;
+}
+
+#answer-container .question .question__title label{
+    font-weight: 600;
+}
+
+#answer-container .question .question__option{
+    max-width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+#answer-container .question .answer__input{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+#answer-container .question .answer__input:checked + label{
+    color: red;
+}
+
+#answer-container .question .answer__input.correct + label {
+    color: #4CAF50;
+}
+
+#answer-container .question .answer__input + label .picked{
+    display: none;
+}
+
+#answer-container .question .answer__input:checked + label .picked{
+    display: inline;
+    margin-left: 16px;
+    font-style: italic;
+}
