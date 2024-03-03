@@ -87,14 +87,19 @@ function getExam(id){
     window.location.href = "./exam.html?id=" + id;
 }
 
+function removeDiacritics(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 searchButton.disabled = false;
 
 searchButton.addEventListener('click', function(){
     let topicName = document.getElementById('search-input').value.toLowerCase();
+    topicName = removeDiacritics(topicName);
     let listTopicSearchByName = [];
 
     listTopics.forEach(topic => {
-        let title = topic.title.toLowerCase();
+        let title = removeDiacritics(topic.title.toLowerCase());
 
         if (title.includes(topicName)){
             listTopicSearchByName.push(topic);
