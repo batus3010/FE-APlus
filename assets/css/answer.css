@@ -76,3 +76,10 @@
     margin-left: 16px;
     font-style: italic;
 }
+
+.no-answer{
+    margin-left: 12px;
+    color: #ff504f;
+    font-size: 20px;
+    font-style: italic;
+}

@@ -70,6 +70,22 @@
     margin-bottom: 320px;
 }
 
+.container .countdown{
+    margin-left: 16px;
+    color: #3e8e41;
+    margin-bottom: 24px;
+}
+
+.container .countdown span{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.container .countdown i{
+    font-size: 24px;
+    margin-right: 12px;
+}
+
 .container .exam__title{
     font-size: 28px;
     margin: 48px 0;

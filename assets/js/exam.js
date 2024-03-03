@@ -52,7 +52,7 @@ function loadExam(topic){
         `<div class="topic" data-id="${topic.id}">
             <h3 class="title">${topic.title}</h3>
             
-            <div class="duration">Thời gian: <span>${topic.time}</span></div>
+            <div class="duration">Thời gian: <span>${topic.time} phút</span></div>
             <div class="deadline">Đến hạn vào: <span>${topic.deadline}</span></div>
 
             <div class="status ${statusExam}">${topic.status}</div>
@@ -111,6 +111,10 @@ function showExam(topic){
     examContentHtml += `
         <div class="exam">
             <h3 class="exam__title">${topic.title}</h3>
+            <div class="countdown">
+                <i class="fa-regular fa-clock"></i>
+                <span id="countdown-time"></span>
+            </div>
 
             <div class="exam__questions">
                 ${questionsContentHtml}
@@ -121,6 +125,44 @@ function showExam(topic){
     `;
 
     examContainer.innerHTML = examContentHtml;
+    startCountdown(topic.time);
+}
+
+function startCountdown(minus) {
+    let countdown = document.getElementById("countdown-time");
+    let timeLeft = minus * 60; // chuyển minus thành giây
+
+    let interval = setInterval(function() {
+        if (timeLeft < 0) {
+            clearInterval(interval);
+            
+            autoSubmitExam();
+        } else {
+            countdown.textContent = formatTime(timeLeft);
+            timeLeft--;
+        }
+    }, 1000);
+}
+
+function formatTime(seconds) {
+    let hours = Math.floor(seconds / 3600);
+    let minutes = Math.floor((seconds % 3600) / 60);
+    let remainingSeconds = seconds % 60;
+
+    return pad(hours) + ":" + pad(minutes) + ":" + pad(remainingSeconds);
+}
+
+function pad(value) {
+    return value < 10 ? "0" + value : value;
+}
+
+function autoSubmitExam(){
+    popup.innerHTML = `
+        <div class="message">
+            <h4 class="message__content">Bài kiểm tra của bạn đã được tự động nộp do hết thời gian</h4>
+            <button type="button" class="message__btn" onclick="showScore()">Ok</button>
+        </div>
+    `;
 }
 
 function checkChooseAnswer(){
@@ -156,12 +198,22 @@ function checkChooseAnswer(){
 
 function showScore(){
     let score = 0;
-    const inputs = document.querySelectorAll(".answer__input");
+    let questions = document.querySelectorAll('.question');
     const selectedValues = [];
 
-    inputs.forEach((input) => {
-        if (input.checked) {
-            selectedValues.push(input.value);
+    questions.forEach((q, i) => {
+        const inputs = q.querySelectorAll(".answer__input");
+        let isChecked = false;
+
+        inputs.forEach((input) => {
+            if (input.checked) {
+                isChecked = true;
+                selectedValues.push(input.value);
+            }
+        });
+
+        if (!isChecked){
+            selectedValues.push('no answer');
         }
     });
 

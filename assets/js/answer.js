@@ -77,10 +77,17 @@ function showAnswer(topic){
 }
 
 function checkAnswer(topic){
+    let listQuestions = document.querySelectorAll('.question');
+
     topic.questions.forEach((q, index) => {
         let listInputs = document.querySelectorAll(`input[name="answer${index}"]`);
 
-        console.log(listInputs);
+        if (q.yourAnswer == 'no answer'){
+            let questionNoAnswer = listQuestions[index].querySelector('.question__title');
+            
+            questionNoAnswer.insertAdjacentHTML('afterend', '<span class="no-answer">Bạn chưa trả lời câu hỏi này</span>');
+        } 
+
         listInputs.forEach((input, i) => {
             input.disabled = true;
 

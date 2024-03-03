@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Kiểm tra Lịch Sử",
-        "time": "60 phút",
+        "time": "1",
         "deadline": "01/03/2024",
         "status": "Chưa làm",
         "score": "",
@@ -45,7 +45,7 @@
     {
         "id": "2",
         "title": "Toeic test",
-        "time": "120 phút",
+        "time": "120",
         "deadline": "12/01/2024",
         "status": "Đã hoàn thành",
         "score": "6.66",
@@ -88,7 +88,7 @@
     {
         "id": "3",
         "title": "Kiểm tra Toán rời rạc 2",
-        "time": "60 phút",
+        "time": "60",
         "deadline": "21/02/2023",
         "status": "Hết hạn",
         "score": "",
@@ -131,7 +131,7 @@
     {
         "id": "4",
         "title": "Kiểm tra Lý thuyết thông tin",
-        "time": "60 phút",
+        "time": "60",
         "deadline": "21/02/2023",
         "status": "Chưa mở",
         "score": "",
