@@ -106,22 +106,3 @@ body{
     background-color: #fff;
     position: relative;
 }
-
-.background{
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-}
-
-.background .background__left{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.background .background__right{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
