@@ -1,80 +1,83 @@
-body {
-    background-color: #fff;
-    color: #212529;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
+
+.container{
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 120px;
 }
 
-.container {
-    margin: 120px auto;
-    padding-left: 15px;
-    padding-right: 15px;
+.container .topic{
+    width: 100%;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
 }
 
-.section {
-    padding: 0.5rem 2rem 1rem 2rem;
+.container .topic .title{
+    font-size: 22px;
+    margin-bottom: 16px;
 }
 
-.section:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+.container .topic .status{
+    color: #ff504f;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
+.container .topic .status.closed{
+    color: #555;
+    font-weight: 600;
+    font-style: italic;
 }
 
-button, input[type="submit"] {
-    background-color: #d9edff;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0.375rem 0.75rem;
-    text-align: center;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    vertical-align: middle;
+.container .topic .status.complete{
+    color: #4CAF50;
 }
 
-
-input[type="text"] {
-    line-height: 1.8;
-    width: 25%;
+.container .topic .button-box{
+    margin-left: calc(100% - 160px);
 }
 
-input[type="text"]:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
-}
-/* General button styling */
-button {
-    font-family: 'Montserrat', sans-serif; 
-    border: none;         
-    padding: 10px 20px;   
-    color: black;
-    cursor: pointer;      
-    transition: background-color 0.3s ease; 
+.container .topic .button-box button{
+    width: 140px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
 }
 
-/* Style for the submit button */
+.container .topic .button-box button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.container #show-answer{
+    display: none;
+}
+
+.container #show-answer.complete{
+    display: block;
+}
+
+.container .topic .button-box #start-exam.complete, 
+.container .topic .button-box #start-exam.closed, 
+.container .topic .button-box #start-exam.failure{
+    display: none;
+}
+
 #submit-button {
     font-family: 'Montserrat', sans-serif;     
-    background-color: #4CAF50;  /* Green background */
+    background-color: #4CAF50;
     color: white;               
-    padding: 15px 30px;         /* Larger padding */
+    padding: 15px 30px;        
     border: none;   
-    border-radius: 5px;         /* Slightly rounded corners */
+    border-radius: 5px;        
     cursor: pointer;
-    font-size: 16px;            /* Increase font size */
-    position: fixed;            /* Fix position to the viewport */
-    bottom: 20px;               /* 20px from the bottom of the window */
-    right: 20px;                /* 20px from the right of the window */
+    font-size: 16px;
+    position: absolute;
+    right: 20px;
+    display: none;
 }
 
 #submit-button:hover {
-    background-color: #3e8e41;  /* Darker green on hover*/
+    background-color: #3e8e41;
 }
