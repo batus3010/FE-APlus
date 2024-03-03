@@ -64,7 +64,7 @@ function showAnswer(topic){
     examContentHtml += `
         <div class="exam">
             <h3 class="exam__title">${topic.title}</h3>
-            <h3 class="exam__score">Điểm của bạn là: <span>${topic.score.toFixed(2)}</span></h3>
+            <h3 class="exam__score">Điểm của bạn là: <span>${parseFloat(topic.score).toFixed(2)}</span></h3>
 
             <div class="exam__questions">
                 ${questionsContentHtml}
@@ -103,7 +103,7 @@ if (examId == savedExamAnswer.id){
         if (response.status === 200) {
             return response.json();
         } else {
-            throw new Error('Lỗi tải file JSON');
+            console.log("Error load JSON");
         }
     })
     .then(function (data) {
@@ -114,6 +114,7 @@ if (examId == savedExamAnswer.id){
                 } else {
                     answerContainer.innerHTML = '<h3 class="no-answer">Bạn chưa làm bài kiểm tra này</h3>';
                 }
+                break;
             }
         }
     })

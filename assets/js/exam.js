@@ -124,7 +124,34 @@ function showExam(topic){
 }
 
 function checkChooseAnswer(){
-    showScore();
+    let questions = document.querySelectorAll('.question');
+    let allChosen = true;
+
+    questions.forEach(function(question) {
+        let answerInputs = question.querySelectorAll('.answer__input');
+        let massageNotChoose = question.querySelector('.not-choose');
+
+        let hasChosen = Array.from(answerInputs).some(function(option) {
+            return option.checked;
+        });
+
+        answerInputs.forEach(function(input) {
+            input.addEventListener('change', function() {
+                if (massageNotChoose.style.display == 'inline'){
+                    massageNotChoose.style.display = 'none';
+                }
+            });
+        });
+
+        if (!hasChosen){
+            allChosen = false;
+            massageNotChoose.style.display = 'inline';
+        }
+    });
+
+    if (allChosen) {
+        showScore();
+    }
 }
 
 function showScore(){
