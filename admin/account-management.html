@@ -65,76 +65,50 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-5">
+                        <h2 class="mt-4">Quản lý tài khoản sinh viên</h2>
+
                         <div class="wrapper">
-                            <h4 class="heading">Quản lý tài khoản sinh viên</h4>
+                            <div class="box w-100 d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary mb-4 mt-4 px-4 fw-bold" id="add-account">Tạo mới</button>
+                            </div>
+
+                            <div id="pop-up" class="w-100 h-100"></div>
                     
-                            <button type="button" id="add-account">Tạo mới</button>
-                    
-                            <div class="account-list">
-                                <div class="account">
-                                    <div class="account__link">
-                                        <h4 class="info">
-                                            Họ và tên:
-                                            <span class="info__detail">Nguyễn Văn A</span>
-                                        </h4>
-                                        <h4 class="info">
-                                            Email:
-                                            <span class="info__detail">anv@gmail.com</span>
-                                        </h4>
-                                        <h4 class="info">
-                                            Mật khẩu
-                                            <span class="info__detail">********</span>
-                                        </h4>
-                                    
-                                        <div class="controler">
-                                            <button type="button" class="edit-account">Sửa</button>
-                                            <button type="button" class="edit-accont">Xóa</button>
-                                        </div>
+                            <div id="account-list">
+                                <div class="px-4 py-3 d-flex align-items-center border rounded mt-2">
+                                    <div class="flex-grow-1 pe-3">
+                                        <h4 class="fs-5">Họ và tên: <span class="fs-5 fw-normal">Nguyễn Văn A</span></h4>
+                                        <h4 class="fs-5">Email: <span class="fs-5 fw-normal">anv@gmail.com</span></h4>
+                                    </div>
+
+                                    <div class="controler">
+                                        <button type="button" class="btn btn-primary px-3 edit-account">Sửa</button>
+                                        <button type="button" class="btn btn-danger px-3 delete-account">Xóa</button>
                                     </div>
                                 </div>
                     
-                                <div class="account">
-                                    <div class="account__link">
-                                        <h4 class="info">
-                                            Họ và tên:
-                                            <span class="info__detail">Nguyễn Văn A</span>
-                                        </h4>
-                                        <h4 class="info">
-                                            Email:
-                                            <span class="info__detail">anv@gmail.com</span>
-                                        </h4>
-                                        <h4 class="info">
-                                            Mật khẩu
-                                            <span class="info__detail">********</span>
-                                        </h4>
-                                    
-                                        <div class="controler">
-                                            <button type="button" class="edit-account">Sửa</button>
-                                            <button type="button" class="edit-accont">Xóa</button>
-                                        </div>
+                                <div class="px-4 py-3 d-flex align-items-center border rounded mt-2">
+                                    <div class="flex-grow-1 pe-3">
+                                        <h4 class="fs-5">Họ và tên: <span class="fs-5 fw-normal">Nguyễn Văn A</span></h4>
+                                        <h4 class="fs-5">Email: <span class="fs-5 fw-normal">anv@gmail.com</span></h4>
+                                    </div>
+
+                                    <div class="controler">
+                                        <button type="button" class="btn btn-primary px-3 edit-account">Sửa</button>
+                                        <button type="button" class="btn btn-danger px-3 delete-account">Xóa</button>
                                     </div>
                                 </div>
-                                
-                                <div class="account">
-                                    <div class="account__link">
-                                        <h4 class="info">
-                                            Họ và tên:
-                                            <span class="info__detail">Nguyễn Văn A</span>
-                                        </h4>
-                                        <h4 class="info">
-                                            Email:
-                                            <span class="info__detail">anv@gmail.com</span>
-                                        </h4>
-                                        <h4 class="info">
-                                            Mật khẩu
-                                            <span class="info__detail">********</span>
-                                        </h4>
-                                    
-                                        <div class="controler">
-                                            <button type="button" class="edit-account">Sửa</button>
-                                            <button type="button" class="edit-accont">Xóa</button>
-                                        </div>
+
+                                <div class="px-4 py-3 d-flex align-items-center border rounded mt-2">
+                                    <div class="flex-grow-1 pe-3">
+                                        <h4 class="fs-5">Họ và tên: <span class="fs-5 fw-normal">Nguyễn Văn A</span></h4>
+                                        <h4 class="fs-5">Email: <span class="fs-5 fw-normal">anv@gmail.com</span></h4>
+                                    </div>
+
+                                    <div class="controler">
+                                        <button type="button" class="btn btn-primary px-3 edit-account">Sửa</button>
+                                        <button type="button" class="btn btn-danger px-3 delete-account">Xóa</button>
                                     </div>
                                 </div>
                             </div>
@@ -145,6 +119,7 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <script src="./js/scripts.js"></script>
+        <script src="./js/account.js"></script>
     </body>
 </html>

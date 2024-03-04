@@ -10,6 +10,7 @@
         <link href="../assets/images/favicon.png" type="image/x-icon" rel="shortcut icon">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="./css/dashboard.css" rel="stylesheet">
 
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -65,76 +66,40 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <div class="wrapper">
-                            <h4 class="heading">Danh sách các kì thi:</h4>
-                    
-                            <a href="./add-topic.html" class="add-topic">Tạo mới</a>
-                    
-                            <div class="topic-list">
-                                <div class="topic">
-                                    <div class="topic__link">
-                                        <h3 class="title">Bài kiểm tra Lịch sử</h3>
-                                        
-                                        <div class="duration">Thời gian: <span>60 phút</span></div>
-                                        <div class="deadline">Đến hạn vào: <span>01/03/2024</span></div>
-                                    
-                                        <div class="controler">
-                                            <a href="./edit-topic.html" class="edit-">Sửa</a>
-                                            <button type="button" class="edit-topic">Xóa</button>
-                                        </div>
+                    <div class="container-fluid px-5">
+                        <h2 class="mt-4">Danh sách các kì thi</h2>
+
+                        <div class="wrapper mb-5">
+                            <div class="box w-100 d-flex justify-content-end">
+                                <a href="./add-topic.html" class="btn btn-primary mb-4 mt-4 px-4 fw-bold">Tạo mới</a>
+                            </div>
+
+                            <div id="pop-up-dashboard" class="w-100 h-100"></div>
+                        
+                            <div class="list-group">
+                                <div class="list-group-item px-4 py-4">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-3 fs-4">Bài kiểm tra Lịch sử</h5>
+                                        <small>Thời gian: <span>60 phút</span></small>
+                                    </div>
+                                    <p class="mb-1">Đến hạn vào: <span>01/03/2024</span></p>
+                                    <p class="mb-1">Nội dung: <span>Kiểm tra giữa kỳ lấy điểm thành phần.</span></p>
+
+                                    <div class="d-flex justify-content-end">
+                                        <a href="./edit-topic.html" class="btn btn-primary px-4 fw-bold">Sửa</a>
+                                        <button type="button" class="btn btn-danger px-4 fw-bold delete-topic">Xóa</button>
                                     </div>
                                 </div>
-                    
-                                <div class="topic">
-                                    <div class="topic__link">
-                                        <h3 class="title">Bài kiểm tra Lịch sử</h3>
-                                        
-                                        <div class="duration">Thời gian: <span>60 phút</span></div>
-                                        <div class="deadline">Đến hạn vào: <span>01/03/2024</span></div>
-                                    
-                                        <div class="controler">
-                                            <a href="./edit-topic.html" class="edit-">Sửa</a>
-                                            <button type="button" class="edit-topic">Xóa</button>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                                <div class="topic">
-                                    <div class="topic__link">
-                                        <h3 class="title">Bài kiểm tra Lịch sử</h3>
-                                        
-                                        <div class="duration">Thời gian: <span>60 phút</span></div>
-                                        <div class="deadline">Đến hạn vào: <span>01/03/2024</span></div>
-                                    
-                                        <div class="controler">
-                                            <a href="./edit-topic.html" class="edit-">Sửa</a>
-                                            <button type="button" class="edit-topic">Xóa</button>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                                <div class="topic">
-                                    <div class="topic__link">
-                                        <h3 class="title">Bài kiểm tra Lịch sử</h3>
-                                        
-                                        <div class="duration">Thời gian: <span>60 phút</span></div>
-                                        <div class="deadline">Đến hạn vào: <span>01/03/2024</span></div>
-                                    
-                                        <div class="controler">
-                                            <a href="./edit-topic.html" class="edit-">Sửa</a>
-                                            <button type="button" class="edit-topic">Xóa</button>
-                                        </div>
-                                    </div>
-                                </div>
+                        
+                                
                             </div>
                         </div>
-                    </div>
                 </main>
             </div>
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <script src="./js/scripts.js"></script>
+        <script src="./js/dashboard.js"></script>
     </body>
 </html>
