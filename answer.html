@@ -1,32 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đáp án - Thi trắc nghiệm</title>
+
         <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="./assets/css/answer.css">
-        <title>Đáp án</title>
-</head>
-<body>
-    <header>
-        <div class="header">
-            <a href="./home.html" class="homepage__link">
-                <i class="fa-solid fa-house"></i>
-                Trang chủ
-            </a>
+    </head>
 
-            <div class="search">
-                <input type="text" id="search-input" placeholder="Nhập tên bài kiểm tra để tìm kiếm">
-                <button disabled class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <body>
+        <header>
+            <div class="header">
+                <a href="./home.html" class="homepage__link">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                </a>
+
+                <div class="search">
+                    <input type="text" id="search-input" placeholder="Nhập tên bài kiểm tra để tìm kiếm">
+                    <button disabled class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <a class="logout-link" href="./index.html">Đăng xuất</a>
             </div>
+        </header>
 
-            <a class="logout-link" href="./index.html">Đăng xuất</a>
-        </div>
-    </header>
+        <div id="answer-container"></div>
 
-    <div id="answer-container"></div>
-
-    <script src="./assets/js/answer.js"></script>
-</body>
+        <script src="./assets/js/answer.js"></script>
+    </body>
 </html>
