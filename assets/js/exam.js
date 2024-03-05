@@ -52,6 +52,7 @@ function loadExam(topic){
         `<div class="topic" data-id="${topic.id}">
             <h3 class="title">${topic.title}</h3>
             
+            <div class="description">Mô tả: <span>${topic.description}</span></div>
             <div class="duration">Thời gian: <span>${topic.time} phút</span></div>
             <div class="deadline">Đến hạn vào: <span>${topic.deadline}</span></div>
 
