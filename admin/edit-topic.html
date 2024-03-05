@@ -10,6 +10,7 @@
         <link href="../assets/images/favicon.png" type="image/x-icon" rel="shortcut icon">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/add-topic.css">
 
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -71,17 +72,17 @@
                         <div class="wrapper mt-5">
                             <div class="form-group mb-4">
                                 <label class="mb-2 fw-bold" for="inputExamName">Tên kì thi:</label>
-                                <input type="text" class="form-control" id="inputExamName">
+                                <input type="text" class="form-control" id="inputExamName" value="Kiểm tra Lịch Sử">
                             </div>
                         
                             <div class="form-group mb-4">
                                 <label class="mb-2 fw-bold" for="inputDescription">Mô tả:</label>
-                                <input type="text" class="form-control" id="inputDescription">
+                                <input type="text" class="form-control" id="inputDescription" value="Kiểm tra lấy điểm giữa kì.">
                             </div>
 
                             <div class="form-group mb-4">
-                                <label class="mb-2 fw-bold" for="inputDuration">Thời lượng:</label>
-                                <input type="number" class="form-control" id="inputDuration">
+                                <label class="mb-2 fw-bold" for="inputDuration">Thời lượng (Phút):</label>
+                                <input type="number" class="form-control" id="inputDuration" value="60">
                             </div>
 
                             <div class="form-group mb-4">
@@ -89,56 +90,71 @@
 
                                 <div class="form-check">
                                     <label class="form-check-label mb-2" for="freeTime">Làm tự do</label>
-                                    <input type="checkbox" class="form-check-input" id="freeTime">
+                                    <input type="checkbox" class="form-check-input" id="freeTime" checked>
                                 </div>
 
                                 <input type="date" class="form-control" id="inputDeadline">
                             </div>
                         
-                            <div class="add-question mt-5 pt-5">
-                                <div class="form-group">
-                                    <label class="mb-3 fw-bold" for="inputQuestionContent">Nội dung câu hỏi:</label>
-                                    <input type="text" class="form-control" id="inputQuestionContent">
-                                </div>
-                        
-                                <div class="question__content mt-4">
-                                    <div class="correct-answer">
-                                        <h4 class="fs-5 mb-3">Đánh đấu đáp án đúng</h4>
+                            <div id="list-questions" class="mt-5 mb-5">
+                                <div class="question">
+                                    <h4 class="fs-6 mb-2 mt-4">Câu 1: Năm sinh của Albert Einstein?</h4>
 
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="correct" id="correctAnswer1">
-                                            <label class="form-check-label" for="correctAnswer1">Đáp án 1</label>
-                                        </div>
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="correct" id="correctAnswer2">
-                                            <label class="form-check-label" for="correctAnswer2">Đáp án 2</label>
-                                        </div>
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="correct" id="correctAnswer3">
-                                            <label class="form-check-label" for="correctAnswer3">Đáp án 3</label>
-                                        </div>
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="correct" id="correctAnswer4">
-                                            <label class="form-check-label" for="correctAnswer4">Đáp án 4</label>
-                                        </div>
+                                    <div class="question__option">
+                                        <input type="radio" name="answer0" value="">
+                                        <label for="">1890</label>
                                     </div>
-                        
-                                    <div class="options mt-4">
-                                        <h4 class="fs-5 mb-4">Các phương án trả lời</h4>
-
-                                        <input type="text" class="form-control mb-2" name="option">
-                                        <input type="text" class="form-control mb-2" name="option">
-                                        <input type="text" class="form-control mb-2" name="option">
-                                        <input type="text" class="form-control mb-2" name="option">
+                                
+                                    <div class="question__option">
+                                        <input type="radio" name="answer0" value="" checked>
+                                        <label for="">1960</label>
+                                    </div>
+                                
+                                    <div class="question__option">
+                                        <input type="radio" name="answer0" value="">
+                                        <label for="">1879</label>
+                                    </div>
+                                
+                                    <div class="question__option">
+                                        <input type="radio" name="answer0" value="">
+                                        <label for="">1860</label>
                                     </div>
                                 </div>
+
+                                <div class="question">
+                                    <h4 class="fs-6 mb-2 mt-4">Câu 2: Ai là vị tổng thống thứ 16 của Hoa Kỳ?</h4>
+
+                                    <div class="question__option">
+                                        <input type="radio" name="answer1" value="" checked>
+                                        <label for="">Abraham Lincoln</label>
+                                    </div>
+                                
+                                    <div class="question__option">
+                                        <input type="radio" name="answer1" value="">
+                                        <label for="">George Washington</label>
+                                    </div>
+                                
+                                    <div class="question__option">
+                                        <input type="radio" name="answer1" value="">
+                                        <label for="">Thomas Jefferson</label>
+                                    </div>
+                                
+                                    <div class="question__option">
+                                        <input type="radio" name="answer1" value="">
+                                        <label for="">John F. Kennedy</label>
+                                    </div>
+                                </div>                                
                             </div>
+
+                            <button type="button" class="btn btn-primary" id="add-question">Thêm câu hỏi</button>
 
                             <div class="text-center my-5">
                                 <a href="./dashboard.html" class="btn btn-secondary">Hủy</a>
                                 <a href="./dashboard.html" class="btn btn-primary">Xong</a>
                             </div>
                         </div>
+
+                        <div id="pop-up-add-topic"></div>
                     </div>
                 </main>
             </div>
@@ -146,6 +162,6 @@
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="./js/scripts.js"></script>
-        <script src="./js/edit-topic.js"></script>
+        <script src="./js/add-topic.js"></script>
     </body>
 </html>
