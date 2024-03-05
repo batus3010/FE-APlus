@@ -21,6 +21,6 @@
     padding-top: 36px;
 }
 
-input{
+input:not(.search-input) {
     height: 28px;
 }
