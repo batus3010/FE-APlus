@@ -40,6 +40,72 @@
                 ],
                 "yourAnswer": "",
                 "answer": "Louis XVI"
+            },
+            {
+                "content": "Năm sinh của Albert Einstein?",
+                "options": [
+                    "1955",
+                    "1980",
+                    "1860",
+                    "1879"
+                ],
+                "yourAnswer": "",
+                "answer": "1879"
+            },
+            {
+                "content": "Ai là vị tổng thống thứ 16 của Hoa Kỳ?",
+                "options": [
+                    "Abraham Lincoln",
+                    "George Washington",
+                    "Thomas Jefferson",
+                    "John F. Kennedy"
+                ],
+                "yourAnswer": "",
+                "answer": "Abraham Lincoln"
+            },
+            {
+                "content": "Ai là vị vua của nước Pháp trong thời kỳ Phục Hưng?",
+                "options": [
+                    "Louis XIV",
+                    "Napoleon Bonaparte",
+                    "Louis XVI",
+                    "Charles de Gaulle"
+                ],
+                "yourAnswer": "",
+                "answer": "Louis XVI"
+            },
+            {
+                "content": "Năm sinh của Albert Einstein?",
+                "options": [
+                    "1955",
+                    "1980",
+                    "1860",
+                    "1879"
+                ],
+                "yourAnswer": "",
+                "answer": "1879"
+            },
+            {
+                "content": "Ai là vị tổng thống thứ 16 của Hoa Kỳ?",
+                "options": [
+                    "Abraham Lincoln",
+                    "George Washington",
+                    "Thomas Jefferson",
+                    "John F. Kennedy"
+                ],
+                "yourAnswer": "",
+                "answer": "Abraham Lincoln"
+            },
+            {
+                "content": "Ai là vị vua của nước Pháp trong thời kỳ Phục Hưng?",
+                "options": [
+                    "Louis XIV",
+                    "Napoleon Bonaparte",
+                    "Louis XVI",
+                    "Charles de Gaulle"
+                ],
+                "yourAnswer": "",
+                "answer": "Louis XVI"
             }
         ]
     },

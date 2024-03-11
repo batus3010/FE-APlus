@@ -76,8 +76,13 @@ function loadExam(topic){
 function showExam(topic){
     let examContentHtml = '';
     let questionsContentHtml = '';
+    let questionsAnswerCheckHtml = '';
 
     topic.questions.forEach((question, index) => {
+        questionsAnswerCheckHtml += `
+            <div class="check-answer">${index + 1}</div>
+        `;
+
         questionsContentHtml += `
             <div class="question">
                 <h4 class="question__title">
@@ -112,21 +117,43 @@ function showExam(topic){
     examContentHtml += `
         <div class="exam">
             <h3 class="exam__title">${topic.title}</h3>
-            <div class="countdown">
-                <i class="fa-regular fa-clock"></i>
-                <span id="countdown-time"></span>
-            </div>
+            
+            <div class="exam__content">
+                <div class="exam__questions">${questionsContentHtml}</div>
 
-            <div class="exam__questions">
-                ${questionsContentHtml}
-            </div>
+                <div class="exam__control">
+                    <h4>Lựa chọn của bạn</h4>
 
-            <button id="submit-button" onclick="checkChooseAnswer()">Submit</button>
+                    <div class="countdown">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="countdown-time"></span>
+                    </div>
+
+                    <div class="exam__control-answer">${questionsAnswerCheckHtml}</div>
+                    
+                    <button id="submit-button" onclick="checkChooseAnswer()">Submit</button>
+                </div>
+            </div>
         </div>
     `;
 
     examContainer.innerHTML = examContentHtml;
     startCountdown(topic.time);
+    
+    let questions = document.querySelectorAll('.question');
+    let checkQuestions = document.querySelectorAll('.check-answer');
+
+    questions.forEach((q, i) => {
+        const inputs = q.querySelectorAll(".answer__input");
+
+        inputs.forEach((input) => {
+            input.addEventListener('change', function(){
+                if(input.checked){
+                    checkQuestions[i].classList.add('choose');
+                }
+            });
+        });
+    });
 }
 
 function startCountdown(minus) {

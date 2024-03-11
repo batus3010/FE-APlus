@@ -25,6 +25,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .header .search{
@@ -70,18 +71,6 @@ header{
     font-size: 18px;
 }
 
-.header .logout-link{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    margin-right: 16px;
-}
-
-.header .logout-link:hover{
-    color: #ededed;
-}
-
 .header .heading{
     width: 100%;
     height: 100%;
@@ -105,4 +94,56 @@ header{
 body{
     background-color: #fff;
     position: relative;
+}
+
+#user-control{
+    width: 64px;
+    height: 32px;
+    margin-right: 24px;
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+#form-user::before{
+    content: "";
+    display: block;
+    border: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+    position: absolute;
+    top: -24px;
+    right: 20px;
+    z-index: 10;
+}
+
+#form-user{
+    position: absolute;
+    top: calc(100% - 4px);
+    right: 24px;
+    padding: 24px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+    display: none;
+    flex-direction: column;
+}
+
+#form-user a{
+    width: 100%;
+    height: 48px;
+    padding: 0 24px;
+    font-size: 20px;
+    line-height: 48px;
+    text-decoration: none;
+    color: #000;
+}
+
+#form-user a:hover{
+    cursor: pointer;
+    background-color: #edeaea;
+    color: #f52920;
 }

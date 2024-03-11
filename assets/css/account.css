@@ -127,3 +127,90 @@ form .text h3 a:hover {
   width: 100%;
   height: 100%;
 }
+
+.container{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.container .heading{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.container .control{
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+  padding: 48px 32px;
+  position: relative;
+}
+
+.container .control .info{
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.container .control .info span{
+  font-weight: 300;
+}
+
+.container .user-button-box{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 48px;
+}
+
+.container .user-button-box button{
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0e4bf1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .user-button-box button:hover{
+  opacity: 0.8;
+}
+
+.container .detail{
+  flex: 1;
+  border-radius: 12px;
+  margin-left: 24px;
+  box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+  padding: 48px 32px;
+}
+
+#topic-complete{
+  width: 100%;
+  padding: 8px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+#topic-complete .topic{
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+  padding: 16px 24px;
+}
+
+#topic-complete .topic .title{
+  margin-bottom: 12px;
+}
+
+#topic-complete .topic .link-answer{
+  position: absolute;
+  top: calc(100% - 46px);
+  right: 24px;
+}

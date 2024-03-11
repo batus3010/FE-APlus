@@ -1,6 +1,6 @@
 
 .container{
-    width: 960px;
+    width: 1200px;
     max-width: 100%;
     margin: 0 auto;
     margin-top: 120px;
@@ -67,12 +67,74 @@
 .container .exam{
     position: relative;
     width: 100%;
+    height: 100%;
     margin-bottom: 320px;
 }
 
+.exam .exam__content{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.container .exam__questions{
+    width: 100%;
+    height: 680px;
+    overflow: auto;
+    padding: 24px 16px;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.exam .exam__control{
+    width: 320px;
+    margin-left: 32px;
+    padding: 0 24px;
+    padding-top: 24px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.exam .exam__control h4{
+    font-size: 22px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.exam .exam__control-answer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.exam .exam__control-answer .check-answer{
+    width: calc(20% - 8px);
+    margin: 4px;
+    aspect-ratio: 1/1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+    cursor: pointer;
+}
+
+.exam .exam__control-answer .check-answer.choose{
+    color: #fff;
+    background-color: #4CAF50;
+    box-shadow: 0 1px 3px 1px rgba(1, 190, 26, 0.15);
+}
+
 .container .countdown{
-    margin-left: 16px;
+    text-align: left;
     color: #3e8e41;
+    margin-left: 6px;
     margin-bottom: 24px;
 }
 
@@ -91,11 +153,6 @@
     margin: 48px 0;
     width: 100%;
     text-align: center;
-}
-
-.container .exam__questions{
-    width: 100%;
-    margin-bottom: 64px;
 }
 
 .container .question{
@@ -144,13 +201,12 @@
     font-family: 'Montserrat', sans-serif;     
     background-color: #4CAF50;
     color: white;               
-    padding: 18px 42px;        
+    padding: 12px 26px;
+    margin: 36px 0;
     border: none;   
     border-radius: 10px;        
     cursor: pointer;
     font-size: 20px;
-    position: absolute;
-    right: 20px;
 }
 
 #submit-button:hover {

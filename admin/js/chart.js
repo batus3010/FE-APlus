@@ -3,6 +3,7 @@
 const data = [
     {
         "id": 1,
+        "msv": "B21DCCN001",
         "name": "Nguyễn Văn A",
         "exam": "ki-thi-1",
         "date": "2023-11-14",
@@ -11,6 +12,7 @@ const data = [
     },
     {
         "id": 2,
+        "msv": "B21DCCN002",
         "name": "Trần Thị B",
         "exam": "ki-thi-2",
         "date": "2023-12-01",
@@ -19,6 +21,7 @@ const data = [
     },
     {
         "id": 3,
+        "msv": "B21DCCN003",
         "name": "Lê Văn C",
         "exam": "ki-thi-1",
         "date": "2023-11-14",
@@ -76,11 +79,13 @@ function renderTable(data) {
         const row = `
         <tr>
           <td>${index + 1}</td>
+          <td>${student.msv}</td>
           <td>${student.name}</td>
           <td>${student.exam}</td>
           <td>${student.date}</td>
           <td>${student.score}</td>
           <td>${student.status}</td>
+          <td><a class="link-detail-answer" href="../answer.html?id=2">Xem</a></td>
         </tr>
       `;
 

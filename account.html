@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tài khoản - Thi trắc nghiệm</title>
+
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/account.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+                <a href="./home.html" class="homepage__link">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                </a>
+
+                <div class="search">
+                    <input type="text" id="search-input" placeholder="Nhập tên bài kiểm tra để tìm kiếm">
+                    <button disabled class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <button class="user-control" id="user-control"><i class="fa-solid fa-user"></i></button>
+                
+                <div class="form-user" id="form-user">
+                    <a href="./account.html" class="form-user__link">Tài khoản</a>
+                    <a href="./login.html" class="form-user__link">Đăng xuất</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="control">
+                <h4 class="heading">Thông tin tài khoản</h4>
+
+                <div class="user-info">
+                    <h5 class="info">Họ và tên: <span>Nguyễn Văn A</span></h5>
+                    <h5 class="info">Mã sinh viên: <span>B21DCCN001</span></h5>
+                    <h5 class="info">Lớp:<span> D21CQCN11-B</span></h5>
+                    <h5 class="info">Số điện thoại: <span>0123456789</span></h5>
+                    <h5 class="info">Email: <span>ABC.D21CN001@stu.ptit.edu.vn</span></h5>
+                    <h5 class="info">Ngày sinh: <span>01/01/2003</span></h5>
+                    <h5 class="info">Giới tính: <span>Nam</span></h5>
+                </div>
+
+                <div class="user-button-box">
+                    <button id="update-info">Cập nhật</button>
+                    <button id="edit-password">Đổi mật khẩu</button>
+                </div>
+            </div>
+
+            <div class="detail">
+                <h4 class="heading">Các bài kiểm tra đã tham gia</h4>
+
+                <div id="topic-complete">
+                    <div class="topic">
+                        <h3 class="title">Toeic Test</h3>
+                        
+                        <div class="description">Nội dung: <span>Modulo 2 final test.</span></div>
+                        <div class="duration">Thời gian: <span>120 phút</span></div>
+                        <div class="deadline">Ngày hết hạn: <span>12/01/2024</span></div>
+            
+                        <a href="./answer.html?id=2" class="link-answer">Xem kết quả</a>
+                    </div>
+
+                    <div class="topic">
+                        <h3 class="title">Kiểm tra lịch sử</h3>
+                        
+                        <div class="description">Nội dung: <span>Kiểm tra lấy điểm giữa kì</span></div>
+                        <div class="duration">Thời gian: <span>120 phút</span></div>
+                        <div class="deadline">Ngày hết hạn: <span>03/01/2023</span></div>
+            
+                        <a href="./answer.html?id=2" class="link-answer">Xem kết quả</a>
+                    </div>
+
+                    <div class="topic">
+                        <h3 class="title">Thi cuối kì Toán rời rạc 1</h3>
+                        
+                        <div class="description">Nội dung: <span>Kiểm tra lấy điểm cuối kì</span></div>
+                        <div class="duration">Thời gian: <span>120 phút</span></div>
+                        <div class="deadline">Ngày hết hạn: <span>12/01/2024</span></div>
+            
+                        <a href="./answer.html?id=2" class="link-answer">Xem kết quả</a>
+                    </div>
+
+                    <div class="topic">
+                        <h3 class="title">Thi cuối kì Toán rời rạc 1</h3>
+                        
+                        <div class="description">Nội dung: <span>Kiểm tra lấy điểm cuối kì</span></div>
+                        <div class="duration">Thời gian: <span>120 phút</span></div>
+                        <div class="deadline">Ngày hết hạn: <span>12/01/2024</span></div>
+            
+                        <a href="./answer.html?id=2" class="link-answer">Xem kết quả</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const userButton = document.getElementById('user-control');
+            const formUser = document.getElementById('form-user');
+
+            userButton.addEventListener('click', function(){
+                if(formUser.style.display == 'none'){
+                    formUser.style.display = 'flex';
+                } else {
+                    formUser.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -26,7 +26,12 @@
                     <button disabled class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
 
-                <a class="logout-link" href="./index.html">Đăng xuất</a>
+                <button class="user-control" id="user-control"><i class="fa-solid fa-user"></i></button>
+                
+                <div class="form-user" id="form-user">
+                    <a href="./account.html" class="form-user__link">Tài khoản</a>
+                    <a href="./login.html" class="form-user__link">Đăng xuất</a>
+                </div>
             </div>
         </header>
 
@@ -34,5 +39,17 @@
         <div id="popup"></div>
 
         <script src="./assets/js/exam.js"></script>
+        <script>
+            const userButton = document.getElementById('user-control');
+            const formUser = document.getElementById('form-user');
+
+            userButton.addEventListener('click', function(){
+                if(formUser.style.display == 'none'){
+                    formUser.style.display = 'flex';
+                } else {
+                    formUser.style.display = 'none';
+                }
+            });
+        </script>
     </body>
 </html>
