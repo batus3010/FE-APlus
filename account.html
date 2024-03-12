@@ -101,6 +101,8 @@
             </div>
         </div>
 
+        <div id="notify"></div>
+
         <script>
             const userButton = document.getElementById('user-control');
             const formUser = document.getElementById('form-user');
@@ -111,6 +113,78 @@
                 } else {
                     formUser.style.display = 'none';
                 }
+            });
+
+            const notify = document.getElementById('notify');
+            const update = document.getElementById('update-info');
+            const editPassword = document.getElementById('edit-password');
+
+            update.addEventListener('click', function(){
+                notify.style.display = 'block';
+
+                notify.innerHTML = `
+                    <div class="notify update">
+                        <h4>Cập nhật thông tin</h4>
+        
+                        <label for="password">Họ tên:</label><br>
+                        <input type="text"><br>
+        
+                        <label for="password">Mã sinh viên:</label><br>
+                        <input type="text"><br>
+        
+                        <label for="password">Lớp:</label><br>
+                        <input type="text"><br>
+        
+                        <label for="password">Số điện thoại:</label><br>
+                        <input type="text"><br>
+        
+                        <label for="password">Email:</label><br>
+                        <input type="text"><br>
+        
+                        <label for="password">Ngày sinh:</label><br>
+                        <input type="date"><br>
+        
+                        <div class="button-box">
+                            <button class="cancel" type="button">Hủy</button>
+                            <button class="ok" type="button">Xác nhận</button>
+                        </div>
+                    </div>
+                `;
+
+                document.querySelectorAll('#notify button').forEach(button => {
+                    button.addEventListener('click', function(){
+                        notify.style.display = 'none';
+                        notify.innerHTML = '';
+                    });
+                });
+            });
+
+            editPassword.addEventListener('click', function(){
+                notify.style.display = 'block';
+
+                notify.innerHTML = `
+                    <div class="notify">
+                        <h4>Đổi mật khẩu</h4>
+        
+                        <label for="password">Nhập mật khẩu của bạn:</label><br>
+                        <input type="password"><br>
+        
+                        <label for="new-password">Nhập mật khẩu mới:</label><br>
+                        <input type="password"><br>
+        
+                        <div class="button-box">
+                            <button class="cancel" type="button">Hủy</button>
+                            <button class="ok" type="button">Xác nhận</button>
+                        </div>
+                    </div>
+                `;
+
+                document.querySelectorAll('#notify button').forEach(button => {
+                    button.addEventListener('click', function(){
+                        notify.style.display = 'none';
+                        notify.innerHTML = '';
+                    });
+                });
             });
         </script>
     </body>

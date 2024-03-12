@@ -214,3 +214,74 @@ form .text h3 a:hover {
   top: calc(100% - 46px);
   right: 24px;
 }
+
+#notify{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee7a;
+  z-index: 100;
+  display: none;
+}
+
+#notify .notify{
+  min-width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+  padding: 36px;
+}
+
+#notify .notify.update{
+  min-width: 420px;
+}
+
+#notify .notify h4{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+#notify .notify input{
+  margin: 12px 0;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  height: 28px;
+  text-indent: 8px;
+}
+
+#notify .notify button{
+  height: 36px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#notify .notify button:hover{
+  opacity: 0.8;
+}
+
+#notify .notify button.cancel{
+  background-color: #f52920;
+  color: #fff;
+  margin-right: 4px;
+}
+
+#notify .notify button.ok{
+  background-color: #0e4bf1;
+  color: #fff;
+}
+
+#notify .button-box{
+  text-align: center;
+  margin-top: 26px;
+}

@@ -92,5 +92,3 @@ function renderTable(data) {
         tableBody.insertAdjacentHTML("beforeend", row);
     });
 }
-
-// Chart
