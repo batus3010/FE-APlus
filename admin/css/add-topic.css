@@ -25,6 +25,6 @@
     margin-right: 12px;
 }
 
-input{
+input:not(.form-control){
     height: 28px;
 }
